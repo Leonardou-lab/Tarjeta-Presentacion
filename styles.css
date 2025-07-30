@@ -11,12 +11,17 @@ body {
     color: #333;
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Header del perfil */
@@ -279,6 +284,12 @@ section h2::after {
 @media (max-width: 768px) {
     .container {
         padding: 15px;
+        max-width: 100%;
+    }
+    
+    .profile-header {
+        padding: 30px 20px;
+        margin-bottom: 20px;
     }
     
     .name {
@@ -289,35 +300,238 @@ section h2::after {
         font-size: 1rem;
     }
     
+    .bio {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
     section {
         padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
     }
     
     .contact-grid {
         grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .contact-item {
+        padding: 15px;
+    }
+    
+    .contact-item i {
+        font-size: 1.5rem;
+        margin-right: 12px;
+    }
+    
+    .contact-details h3 {
+        font-size: 0.9rem;
+    }
+    
+    .contact-details a,
+    .contact-details p {
+        font-size: 0.9rem;
     }
     
     .social-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .social-item {
+        padding: 15px 10px;
+    }
+    
+    .social-item i {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+    
+    .social-item span {
+        font-size: 0.8rem;
     }
     
     .portfolio-grid {
         grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .portfolio-item {
+        padding: 20px;
+    }
+    
+    .portfolio-item h3 {
+        font-size: 1.1rem;
+    }
+    
+    .portfolio-item p {
+        font-size: 0.9rem;
+    }
+    
+    .project-link {
+        padding: 6px 16px;
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
-    .social-grid {
-        grid-template-columns: 1fr;
+    .container {
+        padding: 10px;
+    }
+    
+    .profile-header {
+        padding: 25px 15px;
     }
     
     .profile-image img {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
     }
     
     .name {
+        font-size: 1.6rem;
+    }
+    
+    .title {
+        font-size: 0.9rem;
+    }
+    
+    .bio {
+        font-size: 0.85rem;
+    }
+    
+    section {
+        padding: 15px;
+    }
+    
+    section h2 {
+        font-size: 1.3rem;
+    }
+    
+    .contact-grid {
+        gap: 12px;
+    }
+    
+    .contact-item {
+        padding: 12px;
+    }
+    
+    .contact-item i {
+        font-size: 1.3rem;
+        margin-right: 10px;
+    }
+    
+    .contact-details h3 {
+        font-size: 0.8rem;
+    }
+    
+    .contact-details a,
+    .contact-details p {
+        font-size: 0.8rem;
+    }
+    
+    .social-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .social-item {
+        padding: 12px 8px;
+    }
+    
+    .social-item i {
         font-size: 1.8rem;
+        margin-bottom: 6px;
+    }
+    
+    .social-item span {
+        font-size: 0.75rem;
+    }
+    
+    .portfolio-item {
+        padding: 15px;
+    }
+    
+    .portfolio-item h3 {
+        font-size: 1rem;
+    }
+    
+    .portfolio-item p {
+        font-size: 0.85rem;
+    }
+    
+    .project-link {
+        padding: 5px 14px;
+        font-size: 0.85rem;
+    }
+    
+    .footer {
+        padding: 15px;
+    }
+    
+    .footer p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 8px;
+    }
+    
+    .profile-header {
+        padding: 20px 12px;
+    }
+    
+    .profile-image img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .name {
+        font-size: 1.4rem;
+    }
+    
+    .title {
+        font-size: 0.8rem;
+    }
+    
+    .bio {
+        font-size: 0.8rem;
+    }
+    
+    section {
+        padding: 12px;
+    }
+    
+    section h2 {
+        font-size: 1.2rem;
+    }
+    
+    .contact-item {
+        padding: 10px;
+    }
+    
+    .contact-item i {
+        font-size: 1.2rem;
+        margin-right: 8px;
+    }
+    
+    .social-item {
+        padding: 10px 6px;
+    }
+    
+    .social-item i {
+        font-size: 1.6rem;
+    }
+    
+    .social-item span {
+        font-size: 0.7rem;
     }
 }
 
